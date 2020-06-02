@@ -1,0 +1,161 @@
+{
+    "name": "Untitled",
+    "components": [
+        {
+            "name": "/Main",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "ffb3081d-55f4-f0ac-9fa5-00d216c1016c",
+                        "fromProperty": "temp",
+                        "toId": "3135a242-61bc-2f79-d684-2c859f1fee15",
+                        "toProperty": "text"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "eacc74e7-4dce-2baf-354b-8070e2b2b872",
+                        "type": "Group",
+                        "x": -142,
+                        "y": -109.5,
+                        "parameters": {
+                            "backgroundColor": "#FFFFFF",
+                            "position": "absolute"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "ba9a13ea-b209-6ac1-5695-bf4b6f96cc3d",
+                                "type": "Image",
+                                "label": "Back Image",
+                                "x": 20,
+                                "y": 46,
+                                "parameters": {
+                                    "src": "背景.jpg",
+                                    "sizeMode": "explicit",
+                                    "style": "{\n}"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "40fb0c0f-a379-147d-c85d-6f949eb25031",
+                                "type": "Text",
+                                "label": "Title",
+                                "x": 20,
+                                "y": 107,
+                                "parameters": {
+                                    "sizeMode": "contentSize",
+                                    "alignX": "left",
+                                    "alignY": "top",
+                                    "text": "Weather \n Infomation",
+                                    "color": "#171717",
+                                    "fontFamily": "Arial",
+                                    "position": "absolute",
+                                    "fontSize": {
+                                        "value": 50,
+                                        "unit": "px"
+                                    }
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "0f7438b1-98a9-ad1b-27b5-17d6ef752056",
+                                "type": "Circle",
+                                "x": 20,
+                                "y": 168,
+                                "parameters": {
+                                    "position": "absolute",
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "transformY": {
+                                        "value": 100,
+                                        "unit": "px"
+                                    },
+                                    "size": 160,
+                                    "fillColor": "#F0EA4F",
+                                    "opacity": 1,
+                                    "strokeEnabled": true,
+                                    "strokeWidth": 3,
+                                    "strokeLineCap": "butt"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "3135a242-61bc-2f79-d684-2c859f1fee15",
+                                "type": "Text",
+                                "label": "Temp",
+                                "x": 20,
+                                "y": 214,
+                                "parameters": {
+                                    "sizeMode": "contentSize",
+                                    "fontSize": {
+                                        "value": 60,
+                                        "unit": "px"
+                                    },
+                                    "color": "#000000",
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "position": "absolute",
+                                    "transformY": {
+                                        "value": 100,
+                                        "unit": "px"
+                                    },
+                                    "text": "25℃"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ffb3081d-55f4-f0ac-9fa5-00d216c1016c",
+                        "type": "Receive Message",
+                        "x": -339,
+                        "y": 32.5,
+                        "parameters": {
+                            "topic": "/Noodl"
+                        },
+                        "ports": [
+                            {
+                                "name": "temp",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {},
+    "rootNodeId": "eacc74e7-4dce-2baf-354b-8070e2b2b872",
+    "version": "1",
+    "metadata": {
+        "deviceSettings": {
+            "deviceTypes": [
+                {
+                    "name": "Web",
+                    "desc": "This is the default device that can be used to view the app from a browser.",
+                    "rootComponentPath": "/Main",
+                    "type": "Browser"
+                }
+            ]
+        },
+        "mqtt": {}
+    }
+}
